@@ -37,7 +37,7 @@ void print_lines(char *str){
     char tempLine[256]; //save a line for current check.
     int i=0;
     
-    printf("Please enter a text to search in.\n");
+    
     while(scanf("%[^\n]%*c", tempLine) != EOF){
         if(strstr(tempLine, str)!=NULL){
             printf("%s\n", tempLine);
@@ -50,7 +50,7 @@ void print_similar_words(char *str){
     char tempWord[30]; //maximum initialization for a possible given txt.
     char c;
     int i=0;
-    printf("Please enter a text to search in.\n");
+    
 
     while((c = getchar()) != EOF) 
 	{ 
@@ -74,15 +74,14 @@ void print_similar_words(char *str){
 
 //Here we will define which action the user want to do and perform it.
 void main(){
-    printf("Welcome to txt_find!");
     
     char str[30];
     //we get the input word from the user.
-    printf("Enter a word to search: ");
+    
     scanf("%s", str);
 
     //here we get the user selection.
-    printf("choose an option.");
+
     char select;
     scanf(" %c\n", &select);
     //call the right function based on the user selction.
